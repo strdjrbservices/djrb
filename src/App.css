@@ -1,0 +1,315 @@
+.App {
+  text-align: center;
+  
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+  background-image: url(http://img1.wsimg.com/isteam/ip/0fd74e55-e5ad-49d2-9e7f-72778653fbbc/blob-4751499.png/:/rs=h:193,cg:true,m/qt=q:95);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-size:60%; */
+  background-blend-mode: transparency;
+  background-position: left top;
+  opacity: 1;
+
+  background-position-x: 40px;
+  background:#a8fff84f; ;
+}
+.logo-container{
+  margin-top: 20px;
+  z-index: -1 !important;
+
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.table{
+  z-index: -1 !important;
+}
+.collection-select{
+  background: #CCC !important;
+}
+.container{
+  z-index: -1 !important;
+  background: none !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.heading-title {
+
+  color: #333;
+  margin-top: 20px;
+  font-family: "Playfair Display", serif;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  max-height: 200px;
+  right: -20px;
+  width: 300px;
+  right: 20px !important;
+  top: 45px !important;
+  left: -74px !important;
+
+}
+
+.collection_name {
+  font-size: 1.5rem;
+  color: #555;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+
+
+  border-radius: 5px;
+  padding: 10px;
+
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-within:active {
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.input-bar {
+  display: flex !important;
+  background: #ffffff !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 20px;
+  border: 1px solid #ddd;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 10px;
+  /* background-color: #f9f9f9; */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-within:active {
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-within:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:focus-within:focus-visible {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-within:focus-within:active {
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-within:focus-within:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:focus-within:focus-within:focus-visible {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-within:focus-within:focus-within:active {
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-within:focus-within:focus-within:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:focus-within:focus-within:focus-within:focus-visible {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.option {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.add-new-button {
+  display: flex !important;
+  justify-content: left !important;
+  align-items: left !important;
+  margin-left: auto !important;
+}
+
+select {
+  height: 50px !important;
+  width: 100% !important;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 2px;
+
+  text-align: left;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 1.2rem;
+  color: #555;
+  background-color: #f9f9f9;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+
+
+}
+.pretag {
+  white-space: pre-wrap; /* Preserve whitespace and wrap as needed */
+  word-wrap: break-word; /* Break long words to prevent overflow */
+  font-family: Arial, Helvetica, sans-serif; /* Use a monospaced font for better readability */
+  font-size: 16px; /* Adjust font size as needed */
+  color: #313131; /* Text color */
+  font-weight: 100;
+  padding: 5px; /* Padding for better appearance */
+  border-radius: 3px; /* Rounded corners */
+}
+
+.error {
+  font-size: 1.2rem;
+  color: red;
+}
