@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import Input from './inputbar';
+import Input from './inputbar.js';
 import Logo from './logo.png'; // Ensure you have a logo.png in the src folder
 import { Button, IconButton, Dialog, DialogTitle, DialogContent, DialogActions, TextField, Box, Typography, Container, Grid, Paper, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import { Add, Edit, Delete, Save, Cancel } from '@mui/icons-material';
@@ -183,7 +183,7 @@ function App() {
                 </tr>
               </thead>
               <tbody>
-                {data.map((doc, docIndex) => (
+                {data.map((doc, docIndex) =>(
                   <tr key={doc._id || docIndex} style={{ backgroundColor: docIndex % 2 === 0 ? '#f9f9f9' : 'white' }}>
                     {Object.entries(doc).filter(([key]) => key !== '_id').map(([key, value], valueIndex) => (
                       <td key={valueIndex} style={{ padding: '8px', border: '1px solid #ddd' }}>
