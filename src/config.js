@@ -26,7 +26,17 @@ export const getApiUrl = () => {
   if (process.env.REACT_APP_API_URL) {
     return process.env.REACT_APP_API_URL;
   }
+
+
+  const environment = process.env.NODE_ENV || 'development';
   
+  if (environment === 'development') {
+      return 'https://djrbreview.vercel.app/api'; // ← if you run backend locally during dev, change this to localhost
+    }
+  
+    // Production backend
+    return 'https://djrbserver.vercel.app/api';
+  };
   // Option 2: Use current hostname
   const protocol = window.location.protocol;
   const hostname = window.location.hostname;
