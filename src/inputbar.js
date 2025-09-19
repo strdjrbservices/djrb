@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import { getApiUrl } from './config';
+import { getApiUrl } from './config.js';
 import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
 const CollectionDropdown = ({ label = '', value, onChange }) => {
