@@ -20,7 +20,17 @@ const CollectionDropdown = ({ label = '', value, onChange }) => {
       .get(`${getApiUrl()}/collections`)
       .then((res) => {
         if (!isMounted) return;
-        setCollections(res.data || []);
+        axios.get(`${getApiUrl()}/collections`)
+  .then((res) => {
+    console.log('Collections response:', res.data); // <--- add this
+    if (Array.isArray(res.data)) {
+      setCollections(res.data);
+    } else {
+      console.error('Expected array but got:', res.data);
+      setCollections([]);
+    }
+  })
+
       })
       .catch((err) => {
         if (!isMounted) return;
