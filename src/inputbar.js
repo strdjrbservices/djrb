@@ -19,14 +19,15 @@ const CollectionDropdown = ({ label = '', value, onChange }) => {
     axios
       .get(`https://djrbserver.vercel.app/collections`)
       .then((res) => {
-        if (!isMounted) return;
-        console.log('Collections response:', res.data); // <--- add thi
-        if (Array.isArray(res.data)) {
-          setCollections(res.data);
-        } else {
-          console.error('Expected array but got:', res.data);
-          setCollections([]);
-        }
+          console.log('Collections response:', res.data);
+          if (Array.isArray(res.data)) {
+            setCollections(res.data);
+          } else {
+            console.error('Expected array but got:', res.data);
+            setCollections([]);
+          }
+        })
+
       })
 
       })
