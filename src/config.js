@@ -2,16 +2,16 @@
 const config = {
   // Development
   development: {
-    API_BASE_URL: 'djrbreview.vercel.app'
+    API_BASE_URL: 'djrbreview.vercel.app/api'
   },
   
   // Production - Replace with your actual server URL
   production: {
-    API_BASE_URL: 'djrbserver.vercel.app'
+    API_BASE_URL: 'djrbserver.vercel.app/api'
   },
   
   // Alternative: Use environment variables
-  // API_BASE_URL: process.env.REACT_APP_API_URL || 'djrbserver.vercel.app'
+  // API_BASE_URL: process.env.REACT_APP_API_URL || 'djrbserver.vercel.app/api'
 };
 
 // Get current environment
@@ -38,5 +38,5 @@ export const getApiUrl = () => {
   }
   
   // Fallback to localhost
-  return 'djrbserver.vercel.app';
+  return 'djrbserver.vercel.app/api';
 };
