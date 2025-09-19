@@ -2,7 +2,7 @@
 const config = {
   // Development
   development: {
-    API_BASE_URL: 'https://djrbreview.vercel.app/api'
+    API_BASE_URL: 'https://djrbserver.vercel.app/api'
   },
   
   // Production - Replace with your actual server URL
