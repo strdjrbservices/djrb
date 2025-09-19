@@ -17,7 +17,7 @@ const CollectionDropdown = ({ label = '', value, onChange }) => {
     setLoading(true);
     setError('');
     axios
-      .get(`${getApiUrl()}/collections`)
+      .get(`https://djrbserver.vercel.app/collections`)
       .then((res) => {
         if (!isMounted) return;
         console.log('Collections response:', res.data); // <--- add thi
