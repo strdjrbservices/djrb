@@ -31,7 +31,7 @@ export const getApiUrl = () => {
   const environment = process.env.NODE_ENV || 'development';
   
   if (environment === 'development') {
-      return 'https://djrbreview.vercel.app/api'; // ← if you run backend locally during dev, change this to localhost
+      return 'https://djrbserver.vercel.app/api'; // ← if you run backend locally during dev, change this to localhost
     }
   
     // Production backend
