@@ -26,7 +26,13 @@ function App() {
     setLoading(true);
     axios.get(`${getApiUrl()}/${selectedCollection}`)
       .then(response => {
-        setData(response.data);
+        if (Array.isArray(response.data)) {
+          setData(response.data);
+        } else {
+          console.error('Expected array, got:', response.data);
+          setData([]);
+        }
+
         setLoading(false);
       })
       .catch(err => {
@@ -46,7 +52,13 @@ function App() {
         await axios.delete(`${getApiUrl()}/${selectedCollection}/${recordId}`);
         // Refresh data
         const response = await axios.get(`${getApiUrl()}/${selectedCollection}`);
-        setData(response.data);
+        if (Array.isArray(response.data)) {
+            setData(response.data);
+          } else {
+              console.error('Expected array, got:', response.data);
+              setData([]);
+            }
+
       } catch (err) {
         console.error('Error deleting record:', err);
         alert('Error deleting record');
@@ -85,7 +97,13 @@ function App() {
       }
       // Refresh data
       const response = await axios.get(`${getApiUrl()}/${selectedCollection}`);
-      setData(response.data);
+     if (Array.isArray(response.data)) {
+          setData(response.data);
+        } else {
+          console.error('Expected array, got:', response.data);
+          setData([]);
+        }
+
       setEditingRecord(null);
       setShowAddModal(false);
       setFormData({});
@@ -183,7 +201,7 @@ function App() {
                 </tr>
               </thead>
               <tbody>
-                {data.map((doc, docIndex) =>(
+                {Array.isArray(data) && data.map((doc, docIndex) => (
                   <tr key={doc._id || docIndex} style={{ backgroundColor: docIndex % 2 === 0 ? '#f9f9f9' : 'white' }}>
                     {Object.entries(doc).filter(([key]) => key !== '_id').map(([key, value], valueIndex) => (
                       <td key={valueIndex} style={{ padding: '8px', border: '1px solid #ddd' }}>
